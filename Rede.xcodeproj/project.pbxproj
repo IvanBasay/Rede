@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FCEC4F028085F0A00506710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC4EF28085F0A00506710 /* AppDelegate.swift */; };
+		5FCEC4F228085F0A00506710 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC4F128085F0A00506710 /* SceneDelegate.swift */; };
+		5FCEC4F428085F0A00506710 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC4F328085F0A00506710 /* ViewController.swift */; };
+		5FCEC4F728085F0A00506710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEC4F528085F0A00506710 /* Main.storyboard */; };
+		5FCEC4F928085F0F00506710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEC4F828085F0F00506710 /* Assets.xcassets */; };
+		5FCEC4FC28085F0F00506710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEC4FA28085F0F00506710 /* LaunchScreen.storyboard */; };
+		5FCEC50728085F0F00506710 /* RedeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC50628085F0F00506710 /* RedeTests.swift */; };
+		5FCEC51128085F0F00506710 /* RedeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC51028085F0F00506710 /* RedeUITests.swift */; };
+		5FCEC51328085F0F00506710 /* RedeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC51228085F0F00506710 /* RedeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FCEC50328085F0F00506710 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FCEC4E428085F0A00506710 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FCEC4EB28085F0A00506710;
+			remoteInfo = Rede;
+		};
+		5FCEC50D28085F0F00506710 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FCEC4E428085F0A00506710 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FCEC4EB28085F0A00506710;
+			remoteInfo = Rede;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FCEC4EC28085F0A00506710 /* Rede.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rede.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCEC4EF28085F0A00506710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FCEC4F128085F0A00506710 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5FCEC4F328085F0A00506710 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FCEC4F628085F0A00506710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FCEC4F828085F0F00506710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FCEC4FB28085F0F00506710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FCEC4FD28085F0F00506710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FCEC50228085F0F00506710 /* RedeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCEC50628085F0F00506710 /* RedeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeTests.swift; sourceTree = "<group>"; };
+		5FCEC50C28085F0F00506710 /* RedeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCEC51028085F0F00506710 /* RedeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeUITests.swift; sourceTree = "<group>"; };
+		5FCEC51228085F0F00506710 /* RedeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FCEC4E928085F0A00506710 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEC4FF28085F0F00506710 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEC50928085F0F00506710 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FCEC4E328085F0A00506710 = {
+			isa = PBXGroup;
+			children = (
+				5FCEC4EE28085F0A00506710 /* Rede */,
+				5FCEC50528085F0F00506710 /* RedeTests */,
+				5FCEC50F28085F0F00506710 /* RedeUITests */,
+				5FCEC4ED28085F0A00506710 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FCEC4ED28085F0A00506710 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FCEC4EC28085F0A00506710 /* Rede.app */,
+				5FCEC50228085F0F00506710 /* RedeTests.xctest */,
+				5FCEC50C28085F0F00506710 /* RedeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FCEC4EE28085F0A00506710 /* Rede */ = {
+			isa = PBXGroup;
+			children = (
+				5FCEC4EF28085F0A00506710 /* AppDelegate.swift */,
+				5FCEC4F128085F0A00506710 /* SceneDelegate.swift */,
+				5FCEC4F328085F0A00506710 /* ViewController.swift */,
+				5FCEC4F528085F0A00506710 /* Main.storyboard */,
+				5FCEC4F828085F0F00506710 /* Assets.xcassets */,
+				5FCEC4FA28085F0F00506710 /* LaunchScreen.storyboard */,
+				5FCEC4FD28085F0F00506710 /* Info.plist */,
+			);
+			path = Rede;
+			sourceTree = "<group>";
+		};
+		5FCEC50528085F0F00506710 /* RedeTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FCEC50628085F0F00506710 /* RedeTests.swift */,
+			);
+			path = RedeTests;
+			sourceTree = "<group>";
+		};
+		5FCEC50F28085F0F00506710 /* RedeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5FCEC51028085F0F00506710 /* RedeUITests.swift */,
+				5FCEC51228085F0F00506710 /* RedeUITestsLaunchTests.swift */,
+			);
+			path = RedeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FCEC4EB28085F0A00506710 /* Rede */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCEC51628085F0F00506710 /* Build configuration list for PBXNativeTarget "Rede" */;
+			buildPhases = (
+				5FCEC4E828085F0A00506710 /* Sources */,
+				5FCEC4E928085F0A00506710 /* Frameworks */,
+				5FCEC4EA28085F0A00506710 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rede;
+			productName = Rede;
+			productReference = 5FCEC4EC28085F0A00506710 /* Rede.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FCEC50128085F0F00506710 /* RedeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCEC51928085F0F00506710 /* Build configuration list for PBXNativeTarget "RedeTests" */;
+			buildPhases = (
+				5FCEC4FE28085F0F00506710 /* Sources */,
+				5FCEC4FF28085F0F00506710 /* Frameworks */,
+				5FCEC50028085F0F00506710 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FCEC50428085F0F00506710 /* PBXTargetDependency */,
+			);
+			name = RedeTests;
+			productName = RedeTests;
+			productReference = 5FCEC50228085F0F00506710 /* RedeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5FCEC50B28085F0F00506710 /* RedeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCEC51C28085F0F00506710 /* Build configuration list for PBXNativeTarget "RedeUITests" */;
+			buildPhases = (
+				5FCEC50828085F0F00506710 /* Sources */,
+				5FCEC50928085F0F00506710 /* Frameworks */,
+				5FCEC50A28085F0F00506710 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FCEC50E28085F0F00506710 /* PBXTargetDependency */,
+			);
+			name = RedeUITests;
+			productName = RedeUITests;
+			productReference = 5FCEC50C28085F0F00506710 /* RedeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FCEC4E428085F0A00506710 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					5FCEC4EB28085F0A00506710 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					5FCEC50128085F0F00506710 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 5FCEC4EB28085F0A00506710;
+					};
+					5FCEC50B28085F0F00506710 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 5FCEC4EB28085F0A00506710;
+					};
+				};
+			};
+			buildConfigurationList = 5FCEC4E728085F0A00506710 /* Build configuration list for PBXProject "Rede" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FCEC4E328085F0A00506710;
+			productRefGroup = 5FCEC4ED28085F0A00506710 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FCEC4EB28085F0A00506710 /* Rede */,
+				5FCEC50128085F0F00506710 /* RedeTests */,
+				5FCEC50B28085F0F00506710 /* RedeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FCEC4EA28085F0A00506710 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCEC4FC28085F0F00506710 /* LaunchScreen.storyboard in Resources */,
+				5FCEC4F928085F0F00506710 /* Assets.xcassets in Resources */,
+				5FCEC4F728085F0A00506710 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEC50028085F0F00506710 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEC50A28085F0F00506710 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FCEC4E828085F0A00506710 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCEC4F428085F0A00506710 /* ViewController.swift in Sources */,
+				5FCEC4F028085F0A00506710 /* AppDelegate.swift in Sources */,
+				5FCEC4F228085F0A00506710 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEC4FE28085F0F00506710 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCEC50728085F0F00506710 /* RedeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEC50828085F0F00506710 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCEC51328085F0F00506710 /* RedeUITestsLaunchTests.swift in Sources */,
+				5FCEC51128085F0F00506710 /* RedeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FCEC50428085F0F00506710 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FCEC4EB28085F0A00506710 /* Rede */;
+			targetProxy = 5FCEC50328085F0F00506710 /* PBXContainerItemProxy */;
+		};
+		5FCEC50E28085F0F00506710 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FCEC4EB28085F0A00506710 /* Rede */;
+			targetProxy = 5FCEC50D28085F0F00506710 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FCEC4F528085F0A00506710 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCEC4F628085F0A00506710 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FCEC4FA28085F0F00506710 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCEC4FB28085F0F00506710 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FCEC51428085F0F00506710 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5FCEC51528085F0F00506710 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FCEC51728085F0F00506710 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7AGGR3TBG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rede/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IvanBasai.Rede;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FCEC51828085F0F00506710 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7AGGR3TBG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rede/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IvanBasai.Rede;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5FCEC51A28085F0F00506710 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7AGGR3TBG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IvanBasai.RedeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rede.app/Rede";
+			};
+			name = Debug;
+		};
+		5FCEC51B28085F0F00506710 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7AGGR3TBG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IvanBasai.RedeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rede.app/Rede";
+			};
+			name = Release;
+		};
+		5FCEC51D28085F0F00506710 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7AGGR3TBG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IvanBasai.RedeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rede;
+			};
+			name = Debug;
+		};
+		5FCEC51E28085F0F00506710 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7AGGR3TBG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IvanBasai.RedeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rede;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FCEC4E728085F0A00506710 /* Build configuration list for PBXProject "Rede" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCEC51428085F0F00506710 /* Debug */,
+				5FCEC51528085F0F00506710 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FCEC51628085F0F00506710 /* Build configuration list for PBXNativeTarget "Rede" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCEC51728085F0F00506710 /* Debug */,
+				5FCEC51828085F0F00506710 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FCEC51928085F0F00506710 /* Build configuration list for PBXNativeTarget "RedeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCEC51A28085F0F00506710 /* Debug */,
+				5FCEC51B28085F0F00506710 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FCEC51C28085F0F00506710 /* Build configuration list for PBXNativeTarget "RedeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCEC51D28085F0F00506710 /* Debug */,
+				5FCEC51E28085F0F00506710 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FCEC4E428085F0A00506710 /* Project object */;
+}
