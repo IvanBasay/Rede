@@ -6,31 +6,68 @@
 //
 
 import UIKit
+import RealmSwift
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+
+        
+        if !UDKey.isNotFirstLaunch {
+            RealmManager.shared.setupFirstLaunchRealm()
+            UDKey.isNotFirstLaunch = true
+        }
+                
+        if UDKey.currency == .unknown {
+            UDKey.currency = .uah
+        }
+        
+        UILabel.appearance(whenContainedInInstancesOf: [UIDatePicker.self]).textColor = Color.gray
+        UILabel.appearance(whenContainedInInstancesOf: [UIDatePicker.self]).font = UIFont(name: "Nunito-Bold", size: 14)
+        
+        configuteNavigationBar()
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.disabledToolbarClasses = [SwapVC.self]
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses = []
+        
         return true
     }
+    
+  
+    
+    private func configuteNavigationBar() {
 
-    // MARK: UISceneSession Lifecycle
+        UIBarButtonItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.clear], for: .normal)
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: 0), for:.default)
+        
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: Color.black, .font: UIFont(name: "Nunito-Bold", size: 17)!]
+        navBarAppearance.shadowImage = nil
+        navBarAppearance.shadowColor = .clear
+        navBarAppearance.backgroundColor = Color.white
+        navBarAppearance.setBackIndicatorImage(UIImage(named: "back_icon"), transitionMaskImage: UIImage(named: "back_icon"))
+        navBarAppearance.backButtonAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: -200, vertical: 0)
+        navBarAppearance.backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
+        UINavigationBar.appearance().tintColor = Color.black
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
+}
 
-
+enum Currency: String, PersistableEnum {
+    case uah = "₴"
+    case usd = "$"
+    case unknown = "Unknown"
 }
 
