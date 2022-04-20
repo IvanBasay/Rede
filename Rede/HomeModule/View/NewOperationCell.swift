@@ -41,6 +41,8 @@ class NewOperationCell: UITableViewCell {
                 self?.balanceLabel.text = "Balance: \(CurrencyManager.shared.currentCurrency.rawValue) \(RealmManager.shared.fetchTopInfo(currency: CurrencyManager.shared.currentCurrency).balance.roundString(to: 2))"
             }
             
+            amountTF.resignFirstResponder()
+            amountTF.text = ""
             datePicker.date = Date()
 
         }

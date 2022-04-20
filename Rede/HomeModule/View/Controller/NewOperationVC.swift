@@ -22,10 +22,7 @@ class NewOperationVC: BaseViewController {
     override func bind() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         
-        viewModel.categories.sink { [weak self] _ in
-
-            self?.tableView.reloadData()
-        }.store(in: &bag)
+        viewModel.categories.sink { [weak self] _ in self?.tableView.reloadData() }.store(in: &bag)
         
         NewOperationAction.shared.saveNewOperationTapped.sink { [weak self] in
             
