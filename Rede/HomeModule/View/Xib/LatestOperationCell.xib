@@ -33,19 +33,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="233" height="273"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="🫥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-Eu-vcL">
-                                <rect key="frame" x="10" y="10" width="23" height="19.5"/>
+                                <rect key="frame" x="16" y="10" width="23" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zep-iT-mXY">
-                                <rect key="frame" x="38" y="11.5" width="183" height="16.5"/>
+                                <rect key="frame" x="44" y="11.5" width="173" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-kk-yKi">
-                                <rect key="frame" x="90.5" y="123" width="52.5" height="27.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-kk-yKi">
+                                <rect key="frame" x="16" y="123" width="201" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="20"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
@@ -60,14 +60,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Zep-iT-mXY" firstAttribute="centerY" secondItem="dhM-Eu-vcL" secondAttribute="centerY" id="D4O-rw-GAR"/>
-                            <constraint firstAttribute="trailing" secondItem="Zep-iT-mXY" secondAttribute="trailing" constant="12" id="MyQ-bL-eSC"/>
-                            <constraint firstItem="dhM-Eu-vcL" firstAttribute="leading" secondItem="scx-aP-hBa" secondAttribute="leading" constant="10" id="Z0c-vF-xwc"/>
+                            <constraint firstAttribute="trailing" secondItem="Zep-iT-mXY" secondAttribute="trailing" constant="16" id="MyQ-bL-eSC"/>
+                            <constraint firstAttribute="trailing" secondItem="cbX-kk-yKi" secondAttribute="trailing" constant="16" id="Wtq-Xl-yo9"/>
+                            <constraint firstItem="dhM-Eu-vcL" firstAttribute="leading" secondItem="scx-aP-hBa" secondAttribute="leading" constant="16" id="Z0c-vF-xwc"/>
                             <constraint firstAttribute="bottom" secondItem="FCh-yc-Gxt" secondAttribute="bottom" constant="10" id="cDB-6I-NNE"/>
                             <constraint firstItem="FCh-yc-Gxt" firstAttribute="leading" secondItem="scx-aP-hBa" secondAttribute="leading" constant="10" id="e2O-O9-7Sx"/>
                             <constraint firstItem="dhM-Eu-vcL" firstAttribute="top" secondItem="scx-aP-hBa" secondAttribute="top" constant="10" id="fcl-q2-30L"/>
-                            <constraint firstItem="cbX-kk-yKi" firstAttribute="centerX" secondItem="scx-aP-hBa" secondAttribute="centerX" id="jyN-7e-Ntr"/>
                             <constraint firstItem="cbX-kk-yKi" firstAttribute="centerY" secondItem="scx-aP-hBa" secondAttribute="centerY" id="mmL-Gp-8oC"/>
                             <constraint firstItem="Zep-iT-mXY" firstAttribute="leading" secondItem="dhM-Eu-vcL" secondAttribute="trailing" constant="5" id="vyQ-JW-Ncw"/>
+                            <constraint firstItem="cbX-kk-yKi" firstAttribute="leading" secondItem="scx-aP-hBa" secondAttribute="leading" constant="16" id="wev-eg-3rX"/>
                             <constraint firstAttribute="trailing" secondItem="FCh-yc-Gxt" secondAttribute="trailing" constant="10" id="wyv-kF-lNK"/>
                         </constraints>
                     </view>

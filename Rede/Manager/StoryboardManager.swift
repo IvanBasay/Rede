@@ -42,7 +42,7 @@ class StoryboardReferenceBuilder {
 
 enum Storyboard: String {
     case main = "Main"
-//    case sign = "Sign"
+    case debt = "Debt"
 //    case feed = "Feed"
 //    case details = "Details"
 //    case settings = "Settings"

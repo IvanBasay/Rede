@@ -23,11 +23,18 @@ class HomeVC: BaseViewController {
     @IBOutlet weak var showMoreOperationsButton: UIButton!
     @IBOutlet weak var latestOpearionsCV: UICollectionView!
     @IBOutlet weak var swapButton: UIButton!
+    @IBOutlet weak var iOweLabel: UILabel!
+    @IBOutlet weak var oweMeLabel: UILabel!
+    @IBOutlet weak var detailBalanceButton: UIButton!
+    @IBOutlet weak var balanceDetailsStackView: UIStackView!
     
-    var viewModel: HomeViewModel = HomeViewModel()
+    private var viewModel: HomeViewModel = HomeViewModel()
+    
+    private var balanceDetailesShowed: Bool = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationItem.changeBarTo(appearence: .white)
         navigationController?.setNavigationBarHidden(true, animated: false)
         currencySwitcher.update()
 
@@ -40,6 +47,12 @@ class HomeVC: BaseViewController {
         viewModel.topInfo.sink { [weak self] in self?.topInfoChanged($0) }.store(in: &bag)
         viewModel.latesOperations.sink { [weak self] in self?.latesOperationsChanged($0) }.store(in: &bag)
         
+        viewModel.balanceDetails.sink { [weak self] (details) in
+            self?.iOweLabel.text = "\(details.currency.rawValue) \(details.iOweValue.formattedWithSeparator)"
+            self?.oweMeLabel.text = "\(details.currency.rawValue) \(details.oweMeValue.formattedWithSeparator)"
+        }
+        .store(in: &bag)
+        
         earnButton.tapPublisher.sink { [weak self] _ in self?.earnTapped() }.store(in: &bag)
         
         spendButton.tapPublisher.sink { [weak self] _ in self?.spendTapped() }.store(in: &bag)
@@ -48,6 +61,7 @@ class HomeVC: BaseViewController {
         
         showMoreOperationsButton.tapPublisher.sink { [weak self] _ in self?.showMoreOperationsTapped() }.store(in: &bag)
         
+        detailBalanceButton.tapPublisher.sink { [weak self] _ in self?.showDetailsBalance() }.store(in: &bag)
     }
     
     func randomBetween(start: Date, end: Date) -> Date {
@@ -67,15 +81,15 @@ class HomeVC: BaseViewController {
     private func topInfoChanged(_ topInfo: TopInfo) {
         let currency = CurrencyManager.shared.currentCurrency.rawValue
                 
-        earnLabel.text = "\(currency) \(topInfo.earned.roundString(to: 2))"
-        spendLabel.text = "\(currency) \(topInfo.spended.roundString(to: 2))"
-        balanceLabel.text = "\(currency) \(topInfo.balance.roundString(to: 2))"
+        earnLabel.text = "\(currency) \(topInfo.earned.roundString())"
+        spendLabel.text = "\(currency) \(topInfo.spended.roundString())"
+        balanceLabel.text = "\(currency) \(topInfo.balance.roundString())"
         
-        circleEarnCompare.title = "x\(topInfo.earnCompare.roundString(to: 1))"
+        circleEarnCompare.title = "x\(topInfo.earnCompare.roundString())"
         circleEarnCompare.subtitle = "Earn"
         circleEarnCompare.percent = topInfo.earnCompare
         
-        circleSpendCompare.title = "x\(topInfo.spendCompare.roundString(to: 1))"
+        circleSpendCompare.title = "x\(topInfo.spendCompare.roundString())"
         circleSpendCompare.subtitle = "Spend"
         circleSpendCompare.percent = topInfo.spendCompare
         
@@ -96,6 +110,7 @@ class HomeVC: BaseViewController {
         latestOpearionsCV.delegate = self
         latestOpearionsCV.contentInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         titleLabel.text = "Rede"
+        balanceDetailsStackView.layer.opacity = 0
     }
     
     private func loadXib() {
@@ -133,6 +148,22 @@ class HomeVC: BaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    private func showDetailsBalance() {
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            guard let self = self else { return }
+            self.balanceDetailsStackView.isHidden = self.balanceDetailesShowed
+            
+            if self.balanceDetailesShowed {
+                self.balanceDetailsStackView.layer.opacity = 0
+                self.detailBalanceButton.setTitle("Details", for: .normal)
+            } else {
+                self.balanceDetailsStackView.layer.opacity = 1
+                self.detailBalanceButton.setTitle("Hide", for: .normal)
+            }
+            self.balanceDetailesShowed = !self.balanceDetailesShowed
+
+        }
+    }
 }
 
 // MARK: - DataSource

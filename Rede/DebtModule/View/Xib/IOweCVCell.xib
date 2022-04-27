@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Black.ttf">
+            <string>Nunito-Black</string>
+        </array>
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="IOweCVCell" customModule="Rede" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-r5-QFM">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cq-0p-D7H">
+                                <rect key="frame" x="0.0" y="127" width="150" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAR-aT-97r">
+                                        <rect key="frame" x="10" y="10" width="130" height="21"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" name="White"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="DarkGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eAR-aT-97r" secondAttribute="bottom" constant="12" id="JD2-nW-Wr7"/>
+                                    <constraint firstItem="eAR-aT-97r" firstAttribute="top" secondItem="2cq-0p-D7H" secondAttribute="top" constant="10" id="MIm-HR-Y9h"/>
+                                    <constraint firstAttribute="trailing" secondItem="eAR-aT-97r" secondAttribute="trailing" constant="10" id="ZRA-hA-aR0"/>
+                                    <constraint firstItem="eAR-aT-97r" firstAttribute="leading" secondItem="2cq-0p-D7H" secondAttribute="leading" constant="10" id="fUP-XV-Lwe"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cHA-Ue-YF5">
+                                <rect key="frame" x="12" y="12" width="126" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5W-cx-dCs">
+                                        <rect key="frame" x="43" y="0.0" width="40" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="t9W-ek-Bj4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexandr Taruta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwI-n7-YuD">
+                                        <rect key="frame" x="3" y="61" width="120.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" name="White"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrO-di-zcB">
+                                        <rect key="frame" x="50" y="89" width="26" height="14"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="10"/>
+                                        <color key="textColor" name="White"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2cq-0p-D7H" secondAttribute="trailing" id="6zR-0u-QLO"/>
+                            <constraint firstItem="cHA-Ue-YF5" firstAttribute="leading" secondItem="vbd-r5-QFM" secondAttribute="leading" constant="12" id="RJp-Iq-OUg"/>
+                            <constraint firstAttribute="trailing" secondItem="cHA-Ue-YF5" secondAttribute="trailing" constant="12" id="Zh7-20-loL"/>
+                            <constraint firstAttribute="bottom" secondItem="2cq-0p-D7H" secondAttribute="bottom" id="aRF-SO-pfG"/>
+                            <constraint firstItem="2cq-0p-D7H" firstAttribute="leading" secondItem="vbd-r5-QFM" secondAttribute="leading" id="l4Q-pD-x2k"/>
+                            <constraint firstItem="cHA-Ue-YF5" firstAttribute="top" secondItem="vbd-r5-QFM" secondAttribute="top" constant="12" id="mqF-2J-Gxh"/>
+                            <constraint firstItem="2cq-0p-D7H" firstAttribute="top" secondItem="cHA-Ue-YF5" secondAttribute="bottom" constant="12" id="vXO-nn-tGZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="vbd-r5-QFM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0Cb-Vq-RlT"/>
+                <constraint firstItem="vbd-r5-QFM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Uak-GF-2m7"/>
+                <constraint firstAttribute="trailing" secondItem="vbd-r5-QFM" secondAttribute="trailing" id="bOa-6e-xtb"/>
+                <constraint firstAttribute="bottom" secondItem="vbd-r5-QFM" secondAttribute="bottom" id="oGQ-3i-Nrp"/>
+            </constraints>
+            <size key="customSize" width="221" height="284"/>
+            <connections>
+                <outlet property="amountLabel" destination="eAR-aT-97r" id="me9-Z1-rcB"/>
+                <outlet property="dateLabel" destination="zrO-di-zcB" id="xbf-C8-Sx9"/>
+                <outlet property="decorView" destination="2cq-0p-D7H" id="o3L-3W-aHy"/>
+                <outlet property="emojiIcon" destination="x5W-cx-dCs" id="HnO-Ud-8sE"/>
+                <outlet property="nameLabel" destination="FwI-n7-YuD" id="yig-lA-gEN"/>
+            </connections>
+            <point key="canvasLocation" x="84.057971014492765" y="79.017857142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DarkGray">
+            <color red="0.45899999141693115" green="0.45899999141693115" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

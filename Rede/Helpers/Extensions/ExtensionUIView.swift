@@ -25,4 +25,14 @@ extension UIView {
     func cornerRadius(_ radius: CGFloat) {
         self.layer.cornerRadius = radius
     }
+    
+    func addBlur(type: UIBlurEffect.Style) {
+        let blurView = UIVisualEffectView(frame: self.bounds)
+        blurView.effect = UIBlurEffect(style: type)
+        self.insertSubview(blurView, at: 0)
+    }
+    
+    func removeBlur() {
+        self.subviews.forEach({ if $0 is UIVisualEffectView { $0.removeFromSuperview() } })
+    }
 }

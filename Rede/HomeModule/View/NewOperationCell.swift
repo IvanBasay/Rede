@@ -38,7 +38,7 @@ class NewOperationCell: UITableViewCell {
                 self?.stackView.arrangedSubviews.last?.isHidden = !(self?.cellSelected ?? true)
                 self?.stackView.layoutIfNeeded()
             } completion: { [weak self] _ in
-                self?.balanceLabel.text = "Balance: \(CurrencyManager.shared.currentCurrency.rawValue) \(RealmManager.shared.fetchTopInfo(currency: CurrencyManager.shared.currentCurrency).balance.roundString(to: 2))"
+                self?.balanceLabel.text = "Balance: \(CurrencyManager.shared.currentCurrency.rawValue) \(RealmManager.shared.fetchTopInfo(currency: CurrencyManager.shared.currentCurrency).balance.roundString())"
             }
             
             amountTF.resignFirstResponder()
@@ -50,7 +50,7 @@ class NewOperationCell: UITableViewCell {
     
     var currency: Currency = CurrencyManager.shared.currentCurrency {
         didSet {
-            balanceLabel.text = "Balance: \(CurrencyManager.shared.currentCurrency.rawValue) \(RealmManager.shared.fetchTopInfo(currency: CurrencyManager.shared.currentCurrency).balance.roundString(to: 2))"
+            balanceLabel.text = "Balance: \(CurrencyManager.shared.currentCurrency.rawValue) \(RealmManager.shared.fetchTopInfo(currency: CurrencyManager.shared.currentCurrency).balance.roundString())"
             amountTF.addLeftCurrencyView(currency: CurrencyManager.shared.currentCurrency)
         }
     }

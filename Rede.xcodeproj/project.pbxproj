@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5F107A3F2808CDC8003662C1 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F107A3E2808CDC8003662C1 /* ExtensionUIView.swift */; };
 		5F107A412808D327003662C1 /* UDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F107A402808D327003662C1 /* UDKey.swift */; };
+		5F1290B3281877D70037820A /* ExtensionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1290B2281877D70037820A /* ExtensionNumber.swift */; };
+		5F31CE4F2816A984007EA92B /* AddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CE4E2816A984007EA92B /* AddContactViewModel.swift */; };
+		5F31CE512817F325007EA92B /* AddDebtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CE502817F325007EA92B /* AddDebtVC.swift */; };
+		5F31CE532817F33F007EA92B /* AddDebtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CE522817F33F007EA92B /* AddDebtViewModel.swift */; };
+		5F703C7A2819393200FD7CB6 /* CloseDebtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F703C792819393200FD7CB6 /* CloseDebtVC.swift */; };
+		5F703C7C28193A2F00FD7CB6 /* CloseDebtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F703C7B28193A2F00FD7CB6 /* CloseDebtViewModel.swift */; };
 		5F7B00342809C13E00FB364F /* StandartCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B00332809C13E00FB364F /* StandartCategories.swift */; };
 		5F7B00362809C3FF00FB364F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B00352809C3FF00FB364F /* BaseViewModel.swift */; };
 		5F7B00392809C41600FB364F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B00382809C41600FB364F /* BaseViewController.swift */; };
@@ -45,12 +51,30 @@
 		5F9E9ED22808603D00CF9407 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9E9ED02808603D00CF9407 /* ExtensionDate.swift */; };
 		5F9E9EDD2808648A00CF9407 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5F9E9EDC2808648A00CF9407 /* Realm */; };
 		5F9E9EDF2808648A00CF9407 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F9E9EDE2808648A00CF9407 /* RealmSwift */; };
+		5FAAC05928105FA600F32495 /* Debt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAAC05828105FA600F32495 /* Debt.storyboard */; };
+		5FAAC05F2810619B00F32495 /* DebtHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC05E2810619A00F32495 /* DebtHome.swift */; };
+		5FAAC062281061C300F32495 /* IOweCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC060281061C300F32495 /* IOweCVCell.swift */; };
+		5FAAC063281061C300F32495 /* IOweCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FAAC061281061C300F32495 /* IOweCVCell.xib */; };
+		5FAAC066281061D000F32495 /* OweMeCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC064281061D000F32495 /* OweMeCVCell.swift */; };
+		5FAAC067281061D000F32495 /* OweMeCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FAAC065281061D000F32495 /* OweMeCVCell.xib */; };
+		5FAAC069281061F500F32495 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC068281061F500F32495 /* EmojiPicker.swift */; };
+		5FAAC06B281062C600F32495 /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC06A281062C600F32495 /* CarouselLayout.swift */; };
+		5FAAC06E281064BD00F32495 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC06C281064BD00F32495 /* EmojiCell.swift */; };
+		5FAAC06F281064BD00F32495 /* EmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FAAC06D281064BD00F32495 /* EmojiCell.xib */; };
+		5FAAC071281072DE00F32495 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC070281072DE00F32495 /* Contact.swift */; };
+		5FAAC0732810784900F32495 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAC0722810784900F32495 /* Debt.swift */; };
 		5FB2274B280DD65F0076D4B5 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2274A280DD65F0076D4B5 /* Balance.swift */; };
 		5FB2274D280DE7460076D4B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2274C280DE7450076D4B5 /* Reachability.swift */; };
 		5FB2274F280EF18E0076D4B5 /* AllOperationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2274E280EF18E0076D4B5 /* AllOperationsVC.swift */; };
 		5FB22752280EF1F30076D4B5 /* AllOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB22750280EF1F30076D4B5 /* AllOperationCell.swift */; };
 		5FB22753280EF1F30076D4B5 /* AllOperationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB22751280EF1F30076D4B5 /* AllOperationCell.xib */; };
 		5FB22755280EF3C40076D4B5 /* AllOperationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB22754280EF3C40076D4B5 /* AllOperationsViewModel.swift */; };
+		5FBFF1422811551500DE8DDB /* DebtHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFF1412811551500DE8DDB /* DebtHomeViewModel.swift */; };
+		5FBFF14628117EE900DE8DDB /* BubbleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFF14328117EE900DE8DDB /* BubbleTabBarController.swift */; };
+		5FBFF14728117EE900DE8DDB /* BubbleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFF14428117EE900DE8DDB /* BubbleTabBar.swift */; };
+		5FBFF14828117EE900DE8DDB /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFF14528117EE900DE8DDB /* CBTabBarButton.swift */; };
+		5FBFF14B2811A2C000DE8DDB /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFF14A2811A2C000DE8DDB /* AddContactVC.swift */; };
+		5FBFF14D2811C82D00DE8DDB /* ExtensionUINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFF14C2811C82D00DE8DDB /* ExtensionUINavigationBar.swift */; };
 		5FCEC4F028085F0A00506710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC4EF28085F0A00506710 /* AppDelegate.swift */; };
 		5FCEC4F428085F0A00506710 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEC4F328085F0A00506710 /* HomeVC.swift */; };
 		5FCEC4F728085F0A00506710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEC4F528085F0A00506710 /* Main.storyboard */; };
@@ -86,6 +110,12 @@
 /* Begin PBXFileReference section */
 		5F107A3E2808CDC8003662C1 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		5F107A402808D327003662C1 /* UDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDKey.swift; sourceTree = "<group>"; };
+		5F1290B2281877D70037820A /* ExtensionNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNumber.swift; sourceTree = "<group>"; };
+		5F31CE4E2816A984007EA92B /* AddContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewModel.swift; sourceTree = "<group>"; };
+		5F31CE502817F325007EA92B /* AddDebtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtVC.swift; sourceTree = "<group>"; };
+		5F31CE522817F33F007EA92B /* AddDebtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewModel.swift; sourceTree = "<group>"; };
+		5F703C792819393200FD7CB6 /* CloseDebtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseDebtVC.swift; sourceTree = "<group>"; };
+		5F703C7B28193A2F00FD7CB6 /* CloseDebtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseDebtViewModel.swift; sourceTree = "<group>"; };
 		5F7B00332809C13E00FB364F /* StandartCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartCategories.swift; sourceTree = "<group>"; };
 		5F7B00352809C3FF00FB364F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		5F7B00382809C41600FB364F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -117,12 +147,30 @@
 		5F9E9ECA2808602E00CF9407 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 		5F9E9ECF2808603D00CF9407 /* ExtensionDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
 		5F9E9ED02808603D00CF9407 /* ExtensionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
+		5FAAC05828105FA600F32495 /* Debt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Debt.storyboard; sourceTree = "<group>"; };
+		5FAAC05E2810619A00F32495 /* DebtHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtHome.swift; sourceTree = "<group>"; };
+		5FAAC060281061C300F32495 /* IOweCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOweCVCell.swift; sourceTree = "<group>"; };
+		5FAAC061281061C300F32495 /* IOweCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IOweCVCell.xib; sourceTree = "<group>"; };
+		5FAAC064281061D000F32495 /* OweMeCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeCVCell.swift; sourceTree = "<group>"; };
+		5FAAC065281061D000F32495 /* OweMeCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OweMeCVCell.xib; sourceTree = "<group>"; };
+		5FAAC068281061F500F32495 /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
+		5FAAC06A281062C600F32495 /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
+		5FAAC06C281064BD00F32495 /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		5FAAC06D281064BD00F32495 /* EmojiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmojiCell.xib; sourceTree = "<group>"; };
+		5FAAC070281072DE00F32495 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5FAAC0722810784900F32495 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
 		5FB2274A280DD65F0076D4B5 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		5FB2274C280DE7450076D4B5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5FB2274E280EF18E0076D4B5 /* AllOperationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllOperationsVC.swift; sourceTree = "<group>"; };
 		5FB22750280EF1F30076D4B5 /* AllOperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllOperationCell.swift; sourceTree = "<group>"; };
 		5FB22751280EF1F30076D4B5 /* AllOperationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllOperationCell.xib; sourceTree = "<group>"; };
 		5FB22754280EF3C40076D4B5 /* AllOperationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllOperationsViewModel.swift; sourceTree = "<group>"; };
+		5FBFF1412811551500DE8DDB /* DebtHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtHomeViewModel.swift; sourceTree = "<group>"; };
+		5FBFF14328117EE900DE8DDB /* BubbleTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBarController.swift; sourceTree = "<group>"; };
+		5FBFF14428117EE900DE8DDB /* BubbleTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBar.swift; sourceTree = "<group>"; };
+		5FBFF14528117EE900DE8DDB /* CBTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabBarButton.swift; sourceTree = "<group>"; };
+		5FBFF14A2811A2C000DE8DDB /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
+		5FBFF14C2811C82D00DE8DDB /* ExtensionUINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUINavigationBar.swift; sourceTree = "<group>"; };
 		5FCEC4EC28085F0A00506710 /* Rede.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rede.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCEC4EF28085F0A00506710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FCEC4F328085F0A00506710 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -175,10 +223,12 @@
 		5F7B00372809C40400FB364F /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				5FBFF14928117EF000DE8DDB /* AnimatedTabBar */,
 				5F7B005A280B797B00FB364F /* SystemMessageView */,
 				5F7B004A280B1A5400FB364F /* PaddingTextField.swift */,
 				5F7B00352809C3FF00FB364F /* BaseViewModel.swift */,
 				5F7B00382809C41600FB364F /* BaseViewController.swift */,
+				5FAAC06A281062C600F32495 /* CarouselLayout.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -220,6 +270,8 @@
 				5F9E9ECF2808603D00CF9407 /* ExtensionDouble.swift */,
 				5F107A3E2808CDC8003662C1 /* ExtensionUIView.swift */,
 				5F7B0052280B211500FB364F /* ExtensionString.swift */,
+				5FBFF14C2811C82D00DE8DDB /* ExtensionUINavigationBar.swift */,
+				5F1290B2281877D70037820A /* ExtensionNumber.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				5FCEC4F528085F0A00506710 /* Main.storyboard */,
+				5FAAC05828105FA600F32495 /* Debt.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -303,6 +356,88 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		5FAAC05A2810616C00F32495 /* DebtModule */ = {
+			isa = PBXGroup;
+			children = (
+				5FAAC05D2810618400F32495 /* Model */,
+				5FAAC05C2810617F00F32495 /* ViewModel */,
+				5FAAC05B2810617900F32495 /* View */,
+			);
+			path = DebtModule;
+			sourceTree = "<group>";
+		};
+		5FAAC05B2810617900F32495 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FAAC07428107A0D00F32495 /* VC */,
+				5FAAC07628114FE100F32495 /* Xib */,
+				5FAAC060281061C300F32495 /* IOweCVCell.swift */,
+				5FAAC064281061D000F32495 /* OweMeCVCell.swift */,
+				5FAAC07528114FC900F32495 /* EmojiPicker */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5FAAC05C2810617F00F32495 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FBFF1412811551500DE8DDB /* DebtHomeViewModel.swift */,
+				5F31CE4E2816A984007EA92B /* AddContactViewModel.swift */,
+				5F31CE522817F33F007EA92B /* AddDebtViewModel.swift */,
+				5F703C7B28193A2F00FD7CB6 /* CloseDebtViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5FAAC05D2810618400F32495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FAAC070281072DE00F32495 /* Contact.swift */,
+				5FAAC0722810784900F32495 /* Debt.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FAAC07428107A0D00F32495 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5FAAC05E2810619A00F32495 /* DebtHome.swift */,
+				5FBFF14A2811A2C000DE8DDB /* AddContactVC.swift */,
+				5F31CE502817F325007EA92B /* AddDebtVC.swift */,
+				5F703C792819393200FD7CB6 /* CloseDebtVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		5FAAC07528114FC900F32495 /* EmojiPicker */ = {
+			isa = PBXGroup;
+			children = (
+				5FAAC068281061F500F32495 /* EmojiPicker.swift */,
+				5FAAC06C281064BD00F32495 /* EmojiCell.swift */,
+				5FAAC06D281064BD00F32495 /* EmojiCell.xib */,
+			);
+			path = EmojiPicker;
+			sourceTree = "<group>";
+		};
+		5FAAC07628114FE100F32495 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				5FAAC061281061C300F32495 /* IOweCVCell.xib */,
+				5FAAC065281061D000F32495 /* OweMeCVCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		5FBFF14928117EF000DE8DDB /* AnimatedTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5FBFF14428117EE900DE8DDB /* BubbleTabBar.swift */,
+				5FBFF14328117EE900DE8DDB /* BubbleTabBarController.swift */,
+				5FBFF14528117EE900DE8DDB /* CBTabBarButton.swift */,
+			);
+			path = AnimatedTabBar;
+			sourceTree = "<group>";
+		};
 		5FCEC4E328085F0A00506710 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +464,7 @@
 				5FCEC4EF28085F0A00506710 /* AppDelegate.swift */,
 				5F9E9ED62808614400CF9407 /* Interface */,
 				5F9E9ED72808614F00CF9407 /* HomeModule */,
+				5FAAC05A2810616C00F32495 /* DebtModule */,
 				5FF625602809ACBF008BCBEE /* Manager */,
 				5F7B00372809C40400FB364F /* Basic */,
 				5F9E9ED52808612100CF9407 /* Resourses */,
@@ -497,6 +633,7 @@
 			files = (
 				5FCEC4FC28085F0F00506710 /* LaunchScreen.storyboard in Resources */,
 				5F9E9ECE2808602E00CF9407 /* Nunito-Black.ttf in Resources */,
+				5FAAC06F281064BD00F32495 /* EmojiCell.xib in Resources */,
 				5FCEC4F928085F0F00506710 /* Assets.xcassets in Resources */,
 				5FB22753280EF1F30076D4B5 /* AllOperationCell.xib in Resources */,
 				5FCEC4F728085F0A00506710 /* Main.storyboard in Resources */,
@@ -505,6 +642,9 @@
 				5F9E9ECD2808602E00CF9407 /* Nunito-Bold.ttf in Resources */,
 				5F7B0059280B796D00FB364F /* SystemMessageView.xib in Resources */,
 				5F7C4C17280880790001DDCA /* CurrencySwapView.xib in Resources */,
+				5FAAC067281061D000F32495 /* OweMeCVCell.xib in Resources */,
+				5FAAC063281061C300F32495 /* IOweCVCell.xib in Resources */,
+				5FAAC05928105FA600F32495 /* Debt.storyboard in Resources */,
 				5F7B0063280C373700FB364F /* NewOperationCell.xib in Resources */,
 				5F9E9ECC2808602E00CF9407 /* Nunito-SemiBold.ttf in Resources */,
 			);
@@ -532,39 +672,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F7B003D2809C67300FB364F /* CurrencyManager.swift in Sources */,
+				5FAAC06B281062C600F32495 /* CarouselLayout.swift in Sources */,
 				5F9E9ED12808603D00CF9407 /* ExtensionDouble.swift in Sources */,
 				5F7B0062280C373700FB364F /* NewOperationCell.swift in Sources */,
 				5F7B003B2809C4C800FB364F /* HomeViewModel.swift in Sources */,
+				5FBFF14728117EE900DE8DDB /* BubbleTabBar.swift in Sources */,
 				5FCEC4F428085F0A00506710 /* HomeVC.swift in Sources */,
 				5FF6256C2809AFD1008BCBEE /* TopInfo.swift in Sources */,
+				5F31CE512817F325007EA92B /* AddDebtVC.swift in Sources */,
 				5FB2274D280DE7460076D4B5 /* Reachability.swift in Sources */,
 				5F7B0051280B1F5900FB364F /* ExchangeResponse.swift in Sources */,
 				5FB2274B280DD65F0076D4B5 /* Balance.swift in Sources */,
+				5FBFF14628117EE900DE8DDB /* BubbleTabBarController.swift in Sources */,
 				5FCEC4F028085F0A00506710 /* AppDelegate.swift in Sources */,
+				5F31CE4F2816A984007EA92B /* AddContactViewModel.swift in Sources */,
 				5FB22755280EF3C40076D4B5 /* AllOperationsViewModel.swift in Sources */,
+				5FAAC05F2810619B00F32495 /* DebtHome.swift in Sources */,
 				5F107A412808D327003662C1 /* UDKey.swift in Sources */,
 				5F7B00362809C3FF00FB364F /* BaseViewModel.swift in Sources */,
 				5FF6256E2809B0B0008BCBEE /* RealmManager.swift in Sources */,
 				5F7B0046280B17AA00FB364F /* SwapVC.swift in Sources */,
+				5FAAC062281061C300F32495 /* IOweCVCell.swift in Sources */,
 				5F7B00392809C41600FB364F /* BaseViewController.swift in Sources */,
 				5F7B0049280B19C100FB364F /* KeyboardLayoutGuide.swift in Sources */,
 				5F9E9ED22808603D00CF9407 /* ExtensionDate.swift in Sources */,
 				5F7B00342809C13E00FB364F /* StandartCategories.swift in Sources */,
 				5F7C4C152808806A0001DDCA /* CurrencySwapView.swift in Sources */,
+				5F1290B3281877D70037820A /* ExtensionNumber.swift in Sources */,
 				5F9E9EC52808601100CF9407 /* Color.swift in Sources */,
 				5F7B005F280C36AA00FB364F /* NewOperationVC.swift in Sources */,
+				5F31CE532817F33F007EA92B /* AddDebtViewModel.swift in Sources */,
 				5F107A3F2808CDC8003662C1 /* ExtensionUIView.swift in Sources */,
 				5F7B0043280B034900FB364F /* LatestOperationCell.swift in Sources */,
+				5FBFF14B2811A2C000DE8DDB /* AddContactVC.swift in Sources */,
+				5FAAC0732810784900F32495 /* Debt.swift in Sources */,
+				5FAAC066281061D000F32495 /* OweMeCVCell.swift in Sources */,
+				5FAAC071281072DE00F32495 /* Contact.swift in Sources */,
 				5FF6256A2809AFD1008BCBEE /* Category.swift in Sources */,
 				5FB2274F280EF18E0076D4B5 /* AllOperationsVC.swift in Sources */,
+				5FBFF14D2811C82D00DE8DDB /* ExtensionUINavigationBar.swift in Sources */,
 				5F7B004B280B1A5400FB364F /* PaddingTextField.swift in Sources */,
 				5FF6255F2809A4A8008BCBEE /* ProgressBar.swift in Sources */,
+				5F703C7C28193A2F00FD7CB6 /* CloseDebtViewModel.swift in Sources */,
+				5F703C7A2819393200FD7CB6 /* CloseDebtVC.swift in Sources */,
 				5F7B0058280B796D00FB364F /* SystemMessageView.swift in Sources */,
 				5F7B0055280B2BAE00FB364F /* StoryboardManager.swift in Sources */,
+				5FBFF1422811551500DE8DDB /* DebtHomeViewModel.swift in Sources */,
+				5FAAC06E281064BD00F32495 /* EmojiCell.swift in Sources */,
 				5F7B004D280B1C2700FB364F /* SwapViewModel.swift in Sources */,
 				5F7B0053280B211500FB364F /* ExtensionString.swift in Sources */,
+				5FBFF14828117EE900DE8DDB /* CBTabBarButton.swift in Sources */,
 				5F7B004F280B1D0000FB364F /* APIManager.swift in Sources */,
 				5F7B0065280C698400FB364F /* NewOperationViewModel.swift in Sources */,
+				5FAAC069281061F500F32495 /* EmojiPicker.swift in Sources */,
 				5F7C4C12280871F90001DDCA /* CircleProgressView.swift in Sources */,
 				5FF625692809AFD1008BCBEE /* Operation.swift in Sources */,
 				5FB22752280EF1F30076D4B5 /* AllOperationCell.swift in Sources */,

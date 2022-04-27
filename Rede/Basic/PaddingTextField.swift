@@ -20,8 +20,11 @@ class PaddingTextField: UITextField {
         didSet {
             attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                        attributes: [NSAttributedString.Key.foregroundColor: placeholderColor])
+            setNeedsDisplay()
         }
     }
+    
+    var format: String?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,8 +40,6 @@ class PaddingTextField: UITextField {
         makeRound()
         attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                    attributes: [NSAttributedString.Key.foregroundColor: placeholderColor])
-        
-        
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -46,6 +47,9 @@ class PaddingTextField: UITextField {
     }
 
     override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        if textAlignment == .center {
+            return bounds.inset(by: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+        }
         return bounds.inset(by: textPadding)
     }
 
@@ -97,5 +101,37 @@ class PaddingTextField: UITextField {
         self.padding.left = 16
         self.leftView = btcAccessoryLabel
     }
-
+    
+    func addPasteView() {
+        let btcAccessory = UIButton()
+        btcAccessory.titleLabel?.font = UIFont(name: "Nunito-SemiBold", size: 13)!
+        btcAccessory.setImage(UIImage(named: "copy_icon"), for: .normal)
+        btcAccessory.layoutIfNeeded()
+        btcAccessory.sizeToFit()
+        btcAccessory.addTarget(self, action: #selector(pasteText(_:)), for: .touchUpInside)
+        self.rightViewMode = .always
+        self.padding.right = 12
+        self.rightView = btcAccessory
+    }
+    
+    func addIcon(_ icon: UIImage?) {
+        let btcImage = UIImageView()
+        btcImage.image = icon
+        btcImage.layoutIfNeeded()
+        btcImage.sizeToFit()
+        textPadding.left = 48
+        self.leftViewMode = .always
+        self.padding.left = 12
+        self.leftView = btcImage
+    }
+    
+    
+    
+    @objc private func pasteText(_ sender: UITextField) {
+        if format != nil {
+            self.text = UIPasteboard.general.string?.applyPatternOnNumbers(pattern: format!, replacementCharacter: format?.first ?? "X")
+            return
+        }
+        self.text = UIPasteboard.general.string
+    }
 }

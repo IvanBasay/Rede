@@ -8,8 +8,9 @@
 import Foundation
 
 extension Double {
-    func roundString(to places: Int) -> String {
-        return String(format: "%.\(places)f", self)
+    func roundString() -> String {
+//        return String(format: "%.\(places)f", self.for)
+        return self.formattedWithSeparator
     }
     
     func reduceScale(to places: Int) -> Double {
@@ -41,10 +42,10 @@ extension Double {
             return "\(sign)\(formatted)K"
 
         case 0...:
-            return self.roundString(to: 2)
+            return self.roundString()
 
         default:
-            return "\(sign)\(self.roundString(to: 2))"
+            return "\(sign)\(self.roundString())"
         }
     }
 }

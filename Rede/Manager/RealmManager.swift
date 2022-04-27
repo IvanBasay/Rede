@@ -11,6 +11,8 @@ import Combine
 
 class RealmManager {
     
+    // MARK: - Initialization
+    
     private(set) var localRealm: Realm?
     
     static let shared = RealmManager()
@@ -23,7 +25,7 @@ class RealmManager {
     
     func openRealm() {
         do {
-            let config = Realm.Configuration(schemaVersion: 1, migrationBlock: { migration, oldSchemaVersion in
+            let config = Realm.Configuration(schemaVersion: 2, migrationBlock: { migration, oldSchemaVersion in
                 if oldSchemaVersion > 1 {
                     
                 }
@@ -36,6 +38,8 @@ class RealmManager {
             print("Error opening Realm", error)
         }
     }
+    
+    // MARK: Fetching mathods
     
     func fetchAllOperations(currency: Currency) -> [Operation] {
         if let localRealm = localRealm {
@@ -113,21 +117,55 @@ class RealmManager {
         return Balance()
     }
     
+    func fetchDebts(type: DebtType) -> [Debt] {
+        if let localRealm = localRealm {
+            let debts = localRealm.objects(Debt.self).filter("type == %@", type.rawValue)
+            return Array(debts).sorted(by: { $0.date > $1.date })
+        }
+        return []
+    }
+    
+    func fetchContacts() -> [Contact] {
+        if let localRealm = localRealm {
+            let contacts = localRealm.objects(Contact.self).filter("itsMe == %@", false)
+            return Array(contacts)
+        }
+        return []
+    }
+    
+    func fetchUser() -> Contact? {
+        if let localRealm = localRealm {
+            let me = localRealm.objects(Contact.self).filter("itsMe == %@", true)
+            return me.first
+        }
+        return nil
+    }
+    
+    // MARK: - Modifing methods
+    
     func setupFirstLaunchRealm() {
         addStandartCategories()
         addBalanceObjects()
     }
-    
-    
-    
+        
     func swap(_ from: Currency, to: Currency, fromAmount: Double, toAmount: Double) {
         let hiddenCategories = getHiddenCategories()
         guard let swapTo = hiddenCategories.first(where: { $0.name == "Swap" && $0.isHidden && $0.categoryType == .earn }), let swapFrom = hiddenCategories.first(where: { $0.name == "Swap" && $0.isHidden && $0.categoryType == .spend }) else { return }
         
         addOperation(category: swapFrom, amount: fromAmount, currency: from)
         addOperation(category: swapTo, amount: toAmount, currency: to)
-        
-        
+    }
+    
+    func addSequense<T: Object>(array: [T]) {
+        if let localRealm = localRealm {
+            do {
+                try localRealm.write({
+                    localRealm.add(array)
+                })
+            } catch {
+                print("Error adding sequense", error.localizedDescription)
+            }
+        }
     }
     
     func addOperation(category: Category, amount: Double, currency: Currency, date: Date = Date()) {
@@ -174,6 +212,119 @@ class RealmManager {
             }
         }
     }
+    
+    func addDebt(contact: Contact, amount: Double, type: DebtType, currency: Currency, date: Date = Date()) {
+        let balance = fetchBalance(currency: currency)
+        if let localRealm = localRealm {
+            do {
+                try localRealm.write({
+                    let newDebt = Debt()
+                    newDebt.date = date
+                    newDebt.amount = amount
+                    newDebt.contact = contact
+                    newDebt.type = type
+                    newDebt.currency = currency
+                    localRealm.add(newDebt)
+                    
+                    if type == .OweMe {
+                        balance.balance -= amount
+                    } else {
+                        balance.balance += amount
+                    }
+                    
+                    shouldUpdateData.send()
+                })
+            } catch {
+                print("Error save new debt", error.localizedDescription)
+            }
+        }
+    }
+    
+    func modifyDebt(debt: Debt, amount: Double) {
+        let balance = fetchBalance(currency: debt.currency)
+        if debt.type == .iOwe {
+            if debt.amount == amount {
+                if let localRealm = localRealm {
+                    do {
+                        try localRealm.write({
+                            localRealm.delete(debt)
+                            
+                            balance.balance -= amount
+                            
+                            shouldUpdateData.send()
+                        })
+                    } catch {
+                        print("Cannot modify debt")
+                    }
+                }
+            } else {
+                if let localRealm = localRealm {
+                    do {
+                        try localRealm.write({
+                            debt.amount -= amount
+                            
+                            balance.balance -= amount
+                            
+                            shouldUpdateData.send()
+                        })
+                    } catch {
+                        print("Cannot modify debt")
+                    }
+                }
+            }
+        } else {
+            if amount >= debt.amount {
+                if let localRealm = localRealm {
+                    do {
+                        try localRealm.write({
+                            localRealm.delete(debt)
+                            
+                            balance.balance += amount
+                            
+                            shouldUpdateData.send()
+                        })
+                    } catch {
+                        print("Cannot modify debt")
+                    }
+                }
+            } else {
+                if let localRealm = localRealm {
+                    do {
+                        try localRealm.write({
+                            debt.amount -= amount
+                            
+                            balance.balance += amount
+                            
+                            shouldUpdateData.send()
+                        })
+                    } catch {
+                        print("Cannot modify debt")
+                    }
+                }
+            }
+        }
+    }
+    
+    func addContact(name: String, emoji: String, phoneNumber: String?, cardNumber: String?, itsMe: Bool = false) {
+        if let localRealm = localRealm {
+            do {
+                try localRealm.write({
+                    let newContact = Contact()
+                    newContact.name = name
+                    newContact.emoji = emoji
+                    newContact.phoneNumber = phoneNumber
+                    newContact.cardNumber = cardNumber
+                    newContact.itsMe = itsMe
+                    localRealm.add(newContact)
+                    shouldUpdateData.send()
+                })
+            } catch {
+                print("Error save new contact", error.localizedDescription)
+            }
+        }
+    }
+    
+    // MARK: - Private methods
     
     private func addBalanceObjects() {
         let usd = Balance()

@@ -22,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !UDKey.isNotFirstLaunch {
             RealmManager.shared.setupFirstLaunchRealm()
             UDKey.isNotFirstLaunch = true
+        } else {
+            let allCategories = RealmManager.shared.fetchAllCategories()
+            let strandartCategories = StandartCategories.getStandartCategoriesArray()
+            let diffCateg = strandartCategories.filter({ allCategories.contains($0) })
+            RealmManager.shared.addSequense(array: diffCateg)
         }
                 
         if UDKey.currency == .unknown {
@@ -37,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.disabledToolbarClasses = [SwapVC.self]
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
         IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses = []
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 24
         
         return true
     }
@@ -47,8 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIBarButtonItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.clear], for: .normal)
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: 0), for:.default)
-        
-
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.titleTextAttributes = [.foregroundColor: Color.black, .font: UIFont(name: "Nunito-Bold", size: 17)!]
@@ -61,6 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = Color.black
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        UINavigationBar.appearance().compactAppearance = navBarAppearance
+        if #available(iOS 15.0, *) {
+            UINavigationBar.appearance().compactScrollEdgeAppearance = navBarAppearance
+        }
     }
 
 }

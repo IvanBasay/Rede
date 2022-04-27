@@ -84,7 +84,7 @@ class SwapVC: BaseViewController {
     private func calculateExchange(_ exchange: ExchangeResponse) {
         let fromDoubleValue = Double(fromTF.text ?? "1") ?? 1
         let exchangeCourse = exchange.value
-        let amountStirng = (fromDoubleValue * exchangeCourse).roundString(to: 2)
+        let amountStirng = (fromDoubleValue * exchangeCourse).roundString()
         toTF.text = "\(amountStirng)"
     }
     
@@ -110,8 +110,10 @@ class SwapVC: BaseViewController {
     }
     
     private func swapTapped() {
-        if let fromAmount = Double(fromTF.text ?? ""), let toAmount = Double(toTF.text ?? "") {
-            guard RealmManager.shared.fetchTopInfo(currency: viewModel.from).balance > fromAmount else {
+        let fromStr = fromTF.text?.replacingOccurrences(of: ",", with: ".")
+        let ToStr = toTF.text?.replacingOccurrences(of: ",", with: ".")
+        if let fromAmount = Double(fromStr ?? ""), let toAmount = Double(ToStr ?? "") {
+            guard RealmManager.shared.fetchBalance(currency: viewModel.from).balance > fromAmount else {
                 SystemMessageView().show(message: "Not enought balance", type: .error)
                 return
             }
