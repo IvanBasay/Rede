@@ -19,7 +19,7 @@
 
 - [ ] Week/Month/Year withdraw
 - [ ] Remote database integration
-- [ ] Debts functionality
+- [x] Debts functionality
 - [ ] Custom currencies
 - [ ] Bank integration (**Monobank**)
 - [ ] Full history list
