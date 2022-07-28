@@ -31,5 +31,3 @@
 
 - UI/UX Designer: [**Ivan Basai**](https://www.linkedin.com/in/ivanbasay/)
 - Developer: [**Ivan Basai**](https://www.linkedin.com/in/ivanbasay/)
-- Tester: [**Taras Proninko**](https://www.linkedin.com/in/tarasproninko/)
-- Manager: [**Taisiia Sapsai**](https://www.linkedin.com/in/taisiia-sapsai-494a09219/)
